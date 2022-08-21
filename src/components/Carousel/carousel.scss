@@ -1,0 +1,50 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.swiper-img {
+    position: relative;
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.swiper-slide {
+    height: calc(100vh - 144px);
+}
+
+.swiper-button {
+    &-next,
+    &-prev {
+        color: $white-color;
+        &::after {
+            font-size: 24px !important;
+        }
+    }
+    &-next {
+        right: 66px;
+        left: auto;
+    }
+    &-prev {
+        right: auto;
+        left: 66px;
+    }
+}
+
+.swiper-pagination {
+    @include centralize;
+    bottom: 40px !important;
+}
+
+.swiper-pagination-bullet {
+    opacity: 1;
+    margin-left: 16px !important;
+    width: 12px;
+    height: 12px;
+    background: none;
+    border: 2px solid $white-color;
+}
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background-color: $white-color;
+}
+@include pagination-carousel($white-color);

@@ -1,0 +1,109 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.footer-container {
+    height: 604px;
+    margin-top: 87px;
+    width: 100%;
+    background-color: $primary-color;
+    @include centralize($align: flex-end);
+    .footer-about {
+        @include centralize($direction: column);
+        width: 40%;
+        gap: 32px;
+        height: 100%;
+        border-right: 1px solid $white-color;
+        .title-section {
+            width: 320px;
+            text-align: center;
+            @include text($color: $white-color, $weight: 700, $size: 24px);
+        }
+        .text {
+            width: 340px;
+            text-align: center;
+            @include text($color: $white-color, $weight: 400, $size: 14px);
+        }
+        .social-media-container {
+            @include centralize($direction: column);
+            gap: 32px;
+            .social-media-icons {
+                @include centralize;
+                gap: 32px;
+            }
+        }
+        .about-content {
+            gap: 62px;
+            @include centralize($direction: column);
+        }
+    }
+    .footer-information {
+        width: 60%;
+
+        .title-section {
+            text-transform: uppercase;
+            @include text($color: $white-color, $size: 20px, $weight: 700);
+        }
+        .item {
+            @include text($color: $white-color, $size: 14px, $weight: 500);
+        }
+        .top-info {
+            padding-left: 64px;
+            margin-bottom: 32px;
+            @include centralize($align: flex-start, $justify: flex-start);
+            gap: 60px;
+            ul {
+                @include centralize(
+                    $direction: column,
+                    $justify: center,
+                    $align: flex-start
+                );
+                gap: 12px;
+                .item:first-child {
+                    margin-top: 20px;
+                }
+            }
+            .partners-info {
+                width: 169px;
+            }
+        }
+        .mid-info {
+            padding-left: 64px;
+
+            @include centralize($align: flex-start, $justify: flex-start);
+            gap: 180px;
+            .payment-info {
+                width: 260px;
+                .cards-info {
+                    @include centralize($justify: flex-start);
+                    flex-wrap: wrap;
+                    gap: 10px;
+                }
+            }
+            .title-section {
+                margin-bottom: 24px;
+            }
+        }
+        .bottom-info {
+            margin-top: 40px;
+            padding-left: 64px;
+            @include centralize($justify: flex-start);
+            border-top: 1px solid $white-color;
+            height: 134px;
+            width: 100%;
+            .copy {
+                .text {
+                    @include text(
+                        $color: $white-color,
+                        $size: 12px,
+                        $weight: 400
+                    );
+                }
+            }
+            .logos{
+                margin-left: 160px;
+                @include centralize;
+                gap: 32px;
+            }
+        }
+    }
+}

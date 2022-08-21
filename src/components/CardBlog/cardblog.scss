@@ -1,0 +1,29 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.card{
+    &-blog{
+        width: 277px;
+        height: 419px;
+        background-color: $secondary-color;
+        border-radius: 20px;
+        @include centralize($direction: column);
+        img{
+            border-radius: 20px 20px 0px 0px;
+            width: 277px;
+            height: 160px;
+        }
+    }
+    &-content{
+        padding: 24px;
+        width: 100%;
+        height: 259px;
+        @include centralize($direction: column, $justify: space-between, $align: flex-start);
+    }
+    &-title{
+        @include text($size: 20px, $weight: 700, $color: $black-color)
+    }
+    &-text{
+        @include text($size: 14px, $weight: 400, $color: $gray-color)
+    }
+}

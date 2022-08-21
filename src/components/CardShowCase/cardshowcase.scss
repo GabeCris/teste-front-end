@@ -1,0 +1,55 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.card {
+    &-container {
+        width: 277px;
+        height: 414px;
+        @include centralize($direction: column, $justify: space-between);
+        text-align: center;
+        position: relative;
+    }
+    &-description {
+        @include text($color: $black-color, $size: 14px, $weight: 300);
+        text-transform: uppercase;
+        width: 165px;
+    }
+    &-price {
+        @include text($color: $black-color, $size: 18px, $weight: 700);
+        &-underlined {
+            @include text($color: $gray-color, $size: 16px, $weight: 400);
+            text-decoration: line-through;
+        }
+    }
+    &-favorite{
+        position: absolute;
+        top: 15px;
+        right: 26px;
+        cursor: pointer;
+    }
+}
+
+.card-container {
+    .discount{
+        @include text($color: $primary-color, $size: 14px, $weight: 700);
+        text-transform: uppercase;
+        padding: 12px 18px;
+        background-color: $secondary-color;
+        border-radius: 6px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .subs-container {
+        .card-price-subs {
+            @include text($color: $primary-color, $size: 16px, $weight: 700);
+        }
+        .subs-text {
+            @include text($color: $black-color, $size: 12px, $weight: 600);
+        }
+    }
+
+    .button {
+        padding: 16px 56px;
+    }
+}

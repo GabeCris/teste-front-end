@@ -1,0 +1,12 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.button{
+    @include button;
+    &:hover{
+        cursor: pointer;
+    }
+    &:active{
+        cursor: grabbing;
+    }
+}

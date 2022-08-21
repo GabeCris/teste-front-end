@@ -1,0 +1,35 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.categories-container {
+    .title-section{
+        margin-bottom: 32px;
+    }
+    margin: 80px 0 88px 0;
+    &::selection{
+        cursor: grabbing;
+    }
+    .swiper {
+        height: 317px;
+        width: 100%;
+        &-img {
+            width: 277px;
+            height: 277px;
+            border-radius: 20px;
+            margin-bottom: 16px;
+            transition: 0.4s;
+            &:hover {
+                transition: 0.4s;
+                transform: scale(0.93);
+            }
+        }
+        &-slide {
+            height: 100%;
+            @include centralize($direction: column);
+        }
+        &-pagination {
+            display: none;
+        }
+        @include button-carousel();
+    }
+}

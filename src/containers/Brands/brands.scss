@@ -1,0 +1,33 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.brands-container {
+    margin-top: 64px;
+    
+    .row {
+        width: 100%;
+        @include centralize($justify: space-between);
+        margin-bottom: 32px;
+    }
+    .swiper {
+        height: 180px;
+        width: 100%;
+        .text {
+            cursor: pointer;
+            @include text($size: 14px, $weight: 700);
+            text-transform: uppercase;
+            padding: 10px 16px;
+            border-radius: 6px;
+            border: 1px solid #e5e5e5;
+        }
+
+        &-slide {
+            height: 178px;
+            @include centralize($direction: column);
+        }
+        &-pagination {
+            display: none;
+        }
+        @include button-carousel();
+    }
+}

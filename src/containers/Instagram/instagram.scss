@@ -1,0 +1,23 @@
+@import '../../styles/mixins';
+
+.instagram-container {
+    margin-top: 96px;
+    margin-bottom: 80px;
+    .swiper {
+        height: 243px;
+        &-pagination {
+            display: none;
+        }
+        &-button {
+            &-next,
+            &-prev {
+                display: none;
+            }
+        }
+    }
+    .title-follow{
+        width: 100%;
+        @include centralize($justify: space-between);
+        margin-bottom: 32px;
+    }
+}

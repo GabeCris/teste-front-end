@@ -1,0 +1,68 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.showcase-container {
+    width: 100%;
+    // margin-bottom: 160px;
+    .filter-container {
+        width: 100%;
+        height: 58px;
+        margin-bottom: 36px;
+        @include centralize($justify: space-between);
+        .swiper {
+            height: 54px;
+            width: 690px;
+            .text {
+                cursor: pointer;
+                @include text($size: 14px, $weight: 700);
+                text-transform: uppercase;
+                padding: 10px 16px;
+                border-radius: 6px;
+                border: 1px solid #e5e5e5;
+                word-wrap: unset;
+            }
+            .selected {
+                background-color: $primary-color;
+                color: $white-color;
+            }
+
+            &-slide {
+                height: 100%;
+                width: 20%;
+                @include centralize($direction: column);
+            }
+            &-pagination {
+                display: none;
+            }
+            &-button {
+                &-next,
+                &-prev {
+                    display: none;
+                }
+            }
+        }
+    }
+    .cards-container {
+        position: relative;
+        width: 100%;
+        @include centralize($justify: space-between);
+        .swiper {
+            width: 100%;
+            height: 504px;
+            &-slide {
+                @include centralize($align: flex-start);
+            }
+            @include pagination-carousel($gray-color);
+            &-pagination {
+                bottom: 0 !important;
+            }
+            @include button-carousel();
+        }
+        .link {
+            z-index: 10;
+            position: absolute;
+            bottom: 32px;
+            left: calc(50% - 50px);
+        }
+    }
+}

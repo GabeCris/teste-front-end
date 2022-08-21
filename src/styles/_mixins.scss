@@ -1,0 +1,63 @@
+@import "./variables";
+
+@mixin centralize($justify: center, $align: center, $direction: row) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+@mixin text($color: $gray-color, $size: 16px, $weight: 500) {
+    font-size: $size;
+    color: $color;
+    font-weight: $weight;
+}
+
+@mixin button($size: 16px, $weight: 900) {
+    outline: none;
+    padding: 12px 24px;
+    background-color: $primary-color;
+    border: 1px solid $support-primary-color;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-size: $size;
+    font-weight: $weight;
+    color: $white-color;
+    letter-spacing: 0.8px;
+}
+
+@mixin button-carousel($color: $black-color, $background-color: $white-color) {
+    .swiper-button {
+        &-next,
+        &-prev {
+            box-shadow: 0px 6px 12px 0px rgba(178, 134, 0, 0.24);
+            color: $color;
+            background-color: $background-color;
+            border-radius: 50px;
+            width: 32px;
+            height: 32px;
+            &::after {
+                font-size: 12px !important;
+                font-weight: 900;
+            }
+        }
+        &-next {
+            right: 5px;
+            left: auto;
+        }
+        &-prev {
+            right: auto;
+            left: 5px;
+        }
+    }
+}
+
+@mixin pagination-carousel($color: $white-color) {
+    .swiper-pagination-bullet {
+        background-color: none;
+        border-color: $color;
+        &-active{
+            background-color: $color;
+        }
+    }
+}
