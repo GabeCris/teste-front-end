@@ -4,7 +4,7 @@
 
 ### `git clone`
 
-Abra seu terminal e clone este repositório com o comando git clone + SSH ou HTTPS do repo
+Abra seu terminal e clone este repositório com o comando git clone + SSH ou HTTPS do repo, que você pode encontrar aqui um pouco acima no botão verde "CODE"
 
 ### `cd repositório`
 
